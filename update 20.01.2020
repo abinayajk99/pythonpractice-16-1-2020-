@@ -1,0 +1,238 @@
+aspire1015@aspire1015-ThinkCentre-M71e:~$ python
+Python 2.7.12 (default, Oct  8 2019, 14:14:10) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> d={1:"a",2:"b",3:"c",4:"d"}
+>>> d[1]
+'a'
+>>> d.get(1)
+'a'
+>>> d.keys()
+[1, 2, 3, 4]
+>>> d.values()
+['a', 'b', 'c', 'd']
+>>> d.update("1":"abi")
+  File "<stdin>", line 1
+    d.update("1":"abi")
+                ^
+SyntaxError: invalid syntax
+>>> d.update({"1":"abi"})
+>>> d
+{'1': 'abi', 1: 'a', 2: 'b', 3: 'c', 4: 'd'}
+>>> d.update({"0":"abi"})
+>>> d
+{'1': 'abi', 1: 'a', 2: 'b', 3: 'c', 4: 'd', '0': 'abi'}
+>>> d.update(1="boy")
+  File "<stdin>", line 1
+SyntaxError: keyword can't be an expression
+>>> d
+{'1': 'abi', 1: 'a', 2: 'b', 3: 'c', 4: 'd', '0': 'abi'}
+>>> d.update(5="ganes",6="nime")
+  File "<stdin>", line 1
+SyntaxError: keyword can't be an expression
+>>> key={1,2,3,4,5}
+>>> values={'a','b','c','d'}
+>>> dict.fromkeys(key,values)
+{1: set(['a', 'c', 'b', 'd']), 2: set(['a', 'c', 'b', 'd']), 3: set(['a', 'c', 'b', 'd']), 4: set(['a', 'c', 'b', 'd']), 5: set(['a', 'c', 'b', 'd'])}
+>>> dict
+<type 'dict'>
+>>> v="ganse"
+>>> dict.fromkeys(key,v)
+{1: 'ganse', 2: 'ganse', 3: 'ganse', 4: 'ganse', 5: 'ganse'}
+>>> 
+[1]+  Stopped                 python
+aspire1015@aspire1015-ThinkCentre-M71e:~$ cd ..
+aspire1015@aspire1015-ThinkCentre-M71e:/home$ cd home
+bash: cd: home: No such file or directory
+aspire1015@aspire1015-ThinkCentre-M71e:/home$ ls
+aspire1015
+aspire1015@aspire1015-ThinkCentre-M71e:/home$ cd aspire1015
+aspire1015@aspire1015-ThinkCentre-M71e:~$ ls
+abinaya  Documents         Music       Public              str.py
+Desktop  Downloads         Pictures    set.py              Templates
+dic.py   examples.desktop  pracpro.py  Sky_received_files  Videos
+aspire1015@aspire1015-ThinkCentre-M71e:~$ cd Documents
+aspire1015@aspire1015-ThinkCentre-M71e:~/Documents$ ls
+prac file  Python_Fresher_Training_2016.xlsx  python tutorial  update17.01.2020
+aspire1015@aspire1015-ThinkCentre-M71e:~/Documents$ cd prac file
+bash: cd: prac: No such file or directory
+aspire1015@aspire1015-ThinkCentre-M71e:~/Documents$ ls
+prac file  Python_Fresher_Training_2016.xlsx  python tutorial  update17.01.2020
+aspire1015@aspire1015-ThinkCentre-M71e:~/Documents$ cd..
+cd..: command not found
+aspire1015@aspire1015-ThinkCentre-M71e:~/Documents$ cd ..
+aspire1015@aspire1015-ThinkCentre-M71e:~$ ls
+abinaya  Documents         Music       Public              str.py
+Desktop  Downloads         Pictures    set.py              Templates
+dic.py   examples.desktop  pracpro.py  Sky_received_files  Videos
+aspire1015@aspire1015-ThinkCentre-M71e:~$ cd Documents
+aspire1015@aspire1015-ThinkCentre-M71e:~/Documents$ ls
+prac file  Python_Fresher_Training_2016.xlsx  python tutorial  update17.01.2020
+aspire1015@aspire1015-ThinkCentre-M71e:~/Documents$ f=open("prac.txt","r+")
+bash: syntax error near unexpected token `('
+aspire1015@aspire1015-ThinkCentre-M71e:~/Documents$ python
+Python 2.7.12 (default, Oct  8 2019, 14:14:10) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> f=open("prac.txt","r+")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IOError: [Errno 2] No such file or directory: 'prac.txt'
+>>> f=open("txt.txt","r+")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IOError: [Errno 2] No such file or directory: 'txt.txt'
+>>> import os
+>>> os.chdir("/home/aspire1015/Documents/prac file")
+>>> os.getcwd()
+'/home/aspire1015/Documents/prac file'
+>>> f=open("pyth.txt","w+")
+>>> f.write("practing python \n watg isf dks")
+>>> f.read()
+''
+>>> f.seek()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: seek() takes at least 1 argument (0 given)
+>>> f.tell()
+30
+>>> f.seek()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: seek() takes at least 1 argument (0 given)
+>>> f.seek(0,0)
+>>> f.tell()
+0
+>>> f.read()
+'practing python \n watg isf dks'
+>>> f.readline()
+''
+>>> f.tell()
+30
+>>> f.seek(0,0)
+>>> f.readline()
+'practing python \n'
+>>> f.tell()
+17
+>>> f.seek(0,0)
+>>> f.read()
+'practing python \n watg isf dks'
+>>> 
+=================================================================================================================================================
+=============================================================ASSERTION STATMENT=========================================================
+>>>def f():
+...    assert 1!=1
+...    print('Hello')
+>>>f()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 2, in f
+AssertionError
+>>> try:
+...     print('hello')
+...     assert 1!=1
+... except AssertionError as x:
+...     print('error')
+... 
+hello
+error
+>>> try:
+...     print('Hello')
+...     assert 1!=1,"Ganesh"
+... except AssertionError as x:
+...     print(x)
+... 
+Hello
+Ganesh
+>>> try:
+...     print('Hello')
+...     assert 1==1,"Ganesh"
+... except AssertionError as x:
+...     print(x)
+... 
+Hello
+>>> def f():
+...     assert 1!=1,"ganesh"
+... 
+>>> f()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 2, in f
+AssertionError: ganesh
+>>> def f():
+...     assert 1!=1,"ganesh"
+...     print('hi')
+... 
+>>> f()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 2, in f
+AssertionError: ganesh
+>>> 
+
+   =============================================================LAMBDA FUNCTIONS======================================================================
+>>> double = lambda x: x * 2
+>>> double(10)
+20
+>>> new_list = list(map(lambda x: x * 2 , [1,2,3,4]))
+>>> new_list
+[2, 4, 6, 8]
+>>> 
+=======================================================================DECORATORS=====================================================================
+
+>>>def plus_one(number):
+...    return number + 1
+
+>>>add_one = plus_one
+>>>add_one(5)
+6
+
+
+>>>def plus_one(number):
+...    def add_one(number):
+...        return number + 1
+
+
+...    result = add_one(number)
+...    return result
+...
+
+>>>plus_one(4)
+5
+
+
+>>>def plus_one(number):
+...    return number + 1
+
+>>>def function_call(function):
+...    number_to_add = 5
+...    return function(number_to_add)
+...
+>>>function_call(plus_one)
+6
+
+>>>def hello_function():
+...    def say_hi():
+...        return "Hi"
+...    return say_hi
+>>>hello = hello_function()
+>>>hello()
+'Hi'
+
+>>>def print_message(message):
+...    "Enclosong Function"
+...    def message_sender():
+...        "Nested Function"
+...        print(message)
+...    message_sender()
+
+>>>print_message("Some random message")
+'Some random message'
+
+>>>def uppercase_decorator(function):
+...    def wrapper():
+...        func = function()
+...        make_uppercase = func.upper()
+...        return make_uppercase
+...    return wrapper
+

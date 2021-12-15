@@ -1,0 +1,201 @@
+#class
+class book:
+    def __init__ (self,name,price):
+        self.name=name;
+        self.price=price;
+        
+    def config(self):
+        
+        print("name=%s,price=%s"%(self.name,self.price))
+print("Books:")
+com=book("abi",1000)
+com2=book("gan",20)
+com.config()
+com2.config()
+================================================================================================================================
+#class
+class computer:
+    def __init__ (self):
+        self.name="abi";
+        self.age=32;
+        print(self.name,self.age)
+    def update (self):
+        self.name="ganesh"
+        print(self.name,self.age)
+c1=computer()
+#print(self.name,self.age)
+c2=computer()
+c2.update()
+#print(self.name,self.age)
+=================================================================================================================================
+class computer:
+    def __init__(self):
+        self.name=("abi")
+        self.age=("12")
+    def update(self):
+        self.name=("ganes")
+    def compare (self,other):
+        if self.age == other.age:
+            return True
+        else:
+            return False
+
+c1=computer()
+print(c1.name,c1.age)
+c2=computer()
+c2.update()
+c2.age=12
+print(c2.name,c2.age)
+if c1.compare(c2):
+    print("they are same")
+else:
+    print("they are diff")
+=================================================================================================================================
+
+			//variables types (class, instance)
+
+class car:
+
+    wheel=10
+    def __init__ (self):
+        self.name="BMW"
+        self.color="grey"
+c1=car()
+c2=car()
+print(c1.name,c2.color,c1.wheel)
+car.wheel=20
+print(c2.name,c2.color,c2.wheel)
+=================================================================================================================================
+			//instance variables
+
+class BookStore:
+
+    instances = 0
+    def __init__(self, attrib1, attrib2):
+        self.attrib1 = attrib1
+        self.attrib2 = attrib2
+        BookStore.instances += 1
+
+b1 = BookStore("abi", "beautiful")
+b2 = BookStore("ganes", "ugly")
+print(b1.attrib1,b1.attrib2)
+print(b2.attrib1,b2.attrib2)
+
+print("BookStore.instances:", BookStore.instances)
+=====================================================================================================================================
+class BookStore:
+    noOfBooks = 0
+ 
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+        BookStore.noOfBooks += 1
+ 
+    def bookInfo(self):
+        print("Book title:", self.title)
+        print("Book author:", self.author,"\n")
+ 
+# Create a virtual book store
+b1 = BookStore("Great Expectations", "Charles Dickens")
+b2 = BookStore("War and Peace", "Leo Tolstoy")
+b3 = BookStore("Middlemarch", "George Eliot")
+ 
+# call member functions for each object
+b1.bookInfo()
+b2.bookInfo()
+b3.bookInfo()
+
+print("BookStore.noOfBooks:", BookStore.noOfBooks)
+================================================================================================================================
+				//outer class andinner class
+
+
+class student:
+    def __init__ (self,name,age):
+        self.name=name
+        self.age=age
+        self.var=self.laptop()
+    def show (self):
+        print(self.name,self.age)
+        self.var.show()
+    class laptop:
+        def __init__ (self):
+            self.name="Acer"
+            self.price="7200"
+        def show (self):
+            print(self.name,self.price)
+s1=student("abi","20")
+======================================================================================================================================
+class student:
+    def __init__ (self,name,age):
+        self.name=name
+        self.age=age
+        self.var=self.laptop()
+    def show (self):
+        print(self.name,self.age)
+        self.var.show()
+    class laptop:
+        def __init__ (self):
+            self.name="Acer"
+            self.price="7200"
+        def show (self):
+            print(self.name,self.price)
+s1=student("abi","20")
+s2=student("vishu","90")    
+s1.show()
+s2.show()
+print(s1.var.name)
+##lap=student.laptop()
+##lap.show()
+'''new ob creat
+lap1=s1.lap()'''
+s2=student("vishu","90")    
+s1.show()
+s2.show()
+==========================================================================================================
+					//super().
+
+class A():
+    def __init__(self):
+        print('im in A init')
+    def f1(self):
+        print('f1 in A')
+class B(A):
+    def __init__(self):
+        super().__init__()
+        print("iam in B init")
+
+    def f1(self):
+        print('f1 in B')
+    def f3(self):
+        print('f3 in B')
+
+a1 = B()
+======================================================================================================
+			//Method Resolution order.
+
+class A():
+    def __init__(self):
+        print('im in A init')
+    def f1 (self):
+        print('f1 in A')
+class B():
+    def __init__(self):
+        #super().__init__()
+        print("iam in B init")
+
+    def f1 (self):
+        print('f1 in B')
+    def f3(self):
+        print('f3 in B')
+class C(A,B):
+    def __init__ (self):
+        super().__init__()
+        B.__init__(self)
+        print('iam in c')
+    def f4(self):
+        print("f4 in c")
+a1 = C()
+a1.f1()
+==========================================================================================================
+

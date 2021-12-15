@@ -1,0 +1,177 @@
+class employee:
+	
+	no_emp=0
+	raise_amount=1.04	
+	def __init__ (self,first,last,pay):
+		self.first=first
+		self.last=last	
+		self.pay=pay
+		self.email=first+'.'+last+'@compay.com'
+		employee.no_emp+=1
+	def fullname(self):
+		return '{} {}'.format(self.first,self.last)
+	def apply_raise(self):
+		self.pay=int(self.pay*self.raise_amount)
+
+emp1=employee("abi","janu",5000)
+emp2=employee("gane","verr",6000)
+#print(employee.fullname(emp1))
+#print(emp1.fullname())
+#print(emp1.pay)
+
+#print(emp1.apply_raise())
+#print(emp1.pay)
+#print(emp1.raise_amount)
+#print(employee.raise_amount)
+#print(emp2.raise_amount)
+
+'''print(emp1.__dict__)
+print(employee.__dict__)
+
+employee.raise_amount=1.05
+print(employee.raise_amount)
+print(emp1.raise_amount)
+print(emp2.raise_amount)
+
+emp1.raise_amount=1.05
+print(emp1.__dict__)
+print(employee.raise_amount)
+print(emp1.raise_amount)
+print(emp2.raise_amount)'''
+
+print(employee.no_emp)
+emp1=employee("abi","janu",5000)
+emp2=employee("gane","verr",6000)
+print(employee.no_emp)
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+	#class method
+
+class employee:
+	
+	no_emp=0
+	raise_amount=1.04	
+	def __init__ (self,first,last,pay):
+		self.first=first
+		self.last=last	
+		self.pay=pay
+		self.email=first+'.'+last+'@aspire.com'
+		employee.no_emp+=1
+	def fullname(self):
+		return '{} {}'.format(self.first,self.last)
+	def apply_raise(self):
+		self.pay=int(self.pay*self.raise_amount)
+	@classmethod
+	def set_raise_amt(cls,amount):
+		cls.raise_amt=amount
+	@classmethod
+	def from_string(cls,emp_str):
+		first,last,pay=emps1.split("-")
+		return cls(first,last,pay)
+	@staticmethod
+	def is_working(day): 
+		if day.weekday()==5 or day.weekday()==6:
+			return False
+		return True
+
+emp1=employee("abi","janu",5000)
+emp2=employee("gane","verr",6000)		
+
+#employee.set_raise_amt(1.50)
+#print(employee.raise_amt)
+#print(emp1.raise_amt)
+#print(emp2.raise_amt)
+
+'''emps1="bantu-vishu-70000"
+emps2="abi-janu-600000"
+emps3="pad-mani-50000"
+
+nemp1=employee.from_string(emps1)
+print(nemp1.email)
+print(nemp1.pay)'''
+
+import datetime
+my_date=datetime.date(2016,7,11)
+print(employee.is_working(my_date))
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+					//#Decorators
+class employee:
+	
+		
+	def __init__(self,first,last):
+		self.first=first
+		self.last=last	
+		
+	@property	
+	def email(self):
+		return '{}.{}@aspiresys.com'.format(self.first,self.last)
+	@property	
+	def fullname(self):
+		return '{} {}'.format(self.first,self.last)
+	@fullname.setter
+	def fullname(self,name):
+		first,last=name.split(" ")
+		self.first=first
+		self.last=last
+	@fullname.deleter
+	def fullname(self):
+		print('Delete Name!')
+		self.first=None
+		self.last=None
+	
+
+
+emp1=employee('abi','vishu')
+emp1.fullname="abinaya janakiraman"
+#emp1.first='bantu'
+print(emp1.first)
+print(emp1.email)
+print(emp1.fullname)
+del emp1.fullname
+================================================================================================
+				//str and repr
+import datetime
+import pytz
+ 
+a=datetime.datetime.utcnow().replace(tzinfo=pytz.UTC)
+b=str(a)
+print ('str(a):{}'.format(str(a)))
+print ('str(b):{}'.format(str(b)))
+
+print 'repr(a):{}'.format(str(a))
+print 'repr(b):{}'.format(str(b))
+==================================================================================================
+
+	//Magical methods
+class employee:
+	
+	
+	raise_amount=1.04	
+	def __init__ (self,first,last,pay):
+		self.first=first
+		self.last=last	
+		self.pay=pay
+		self.email=first+'.'+last+'@compay.com'
+		
+	def fullname(self):
+		return '{} {}'.format(self.first,self.last)
+	def apply_raise(self):
+		self.pay=int(self.pay*self.raise_amount)
+	def __repr__(self):
+		return "employee('{}','{}','{}')".format(self.first,self.last,self.pay)
+	def __str__(self):
+		return '{}-{}'.format(self.fullname(),self.email)
+
+emp1=employee("abi","janu",5000)
+emp2=employee("gane","verr",6000)
+#print(emp1)
+
+print(repr(emp1))
+print(str(emp1))
+
+#print(emp1.__repr__())
+#print(emp1.__str__())
+
+
+

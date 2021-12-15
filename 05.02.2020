@@ -1,0 +1,761 @@
+aspire1015@aspire1015-ThinkCentre-M71e:~$ sudo apt install python-pip
+[sudo] password for aspire1015: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+python-pip is already the newest version (8.1.1-2ubuntu0.4).
+The following packages were automatically installed and are no longer required:
+  linux-headers-4.15.0-29 linux-headers-4.15.0-29-generic
+  linux-headers-4.15.0-72 linux-headers-4.15.0-72-generic
+  linux-image-4.15.0-29-generic linux-image-4.15.0-72-generic
+  linux-modules-4.15.0-29-generic linux-modules-4.15.0-72-generic
+  linux-modules-extra-4.15.0-29-generic linux-modules-extra-4.15.0-72-generic
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 117 not upgraded.
+aspire1015@aspire1015-ThinkCentre-M71e:~$ python --version
+Python 2.7.12
+aspire1015@aspire1015-ThinkCentre-M71e:~$ pip --version
+pip 20.0.2 from /home/aspire1015/.local/lib/python2.7/site-packages/pip (python 2.7)
+aspire1015@aspire1015-ThinkCentre-M71e:~$ django-admin --version
+1.11.28
+aspire1015@aspire1015-ThinkCentre-M71e:~$  pip install virtualenvwrapper-win
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. A future version of pip will drop support for Python 2.7. More details about Python 2 support in pip, can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support
+Defaulting to user installation because normal site-packages is not writeable
+Collecting virtualenvwrapper-win
+  Downloading virtualenvwrapper_win-1.2.5-py2-none-any.whl (22 kB)
+Collecting virtualenv
+  Downloading virtualenv-16.7.9-py2.py3-none-any.whl (3.4 MB)
+     |████████████████████████████████| 3.4 MB 485 kB/s 
+Installing collected packages: virtualenv, virtualenvwrapper-win
+Successfully installed virtualenv-16.7.9 virtualenvwrapper-win-1.2.5
+aspire1015@aspire1015-ThinkCentre-M71e:~$ mkvirtualenv test
+mkvirtualenv: command not found
+aspire1015@aspire1015-ThinkCentre-M71e:~$ mkvirtualenv test
+mkvirtualenv: command not found
+aspire1015@aspire1015-ThinkCentre-M71e:~$  sudo apt-get install python3.7
+[sudo] password for aspire1015: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package python3.7
+E: Couldn't find any package by glob 'python3.7'
+E: Couldn't find any package by regex 'python3.7'
+aspire1015@aspire1015-ThinkCentre-M71e:~$ sudo update-alternatives --install/usr/bin/python3 python3 /usr/bin/python3.6.1
+update-alternatives: unknown option '--install/usr/bin/python3'
+
+Use 'update-alternatives --help' for program usage information.
+aspire1015@aspire1015-ThinkCentre-M71e:~$ sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6.1
+update-alternatives: --install needs <link> <name> <path> <priority>
+
+Use 'update-alternatives --help' for program usage information.
+aspire1015@aspire1015-ThinkCentre-M71e:~$ sudo update-alternatives --config python3
+update-alternatives: error: no alternatives for python3
+aspire1015@aspire1015-ThinkCentre-M71e:~$ python3 -v
+import _frozen_importlib # frozen
+import _imp # builtin
+import sys # builtin
+import '_warnings' # <class '_frozen_importlib.BuiltinImporter'>
+import '_thread' # <class '_frozen_importlib.BuiltinImporter'>
+import '_weakref' # <class '_frozen_importlib.BuiltinImporter'>
+import '_frozen_importlib_external' # <class '_frozen_importlib.FrozenImporter'>
+import '_io' # <class '_frozen_importlib.BuiltinImporter'>
+import 'marshal' # <class '_frozen_importlib.BuiltinImporter'>
+import 'posix' # <class '_frozen_importlib.BuiltinImporter'>
+import _thread # previously loaded ('_thread')
+import '_thread' # <class '_frozen_importlib.BuiltinImporter'>
+import _weakref # previously loaded ('_weakref')
+import '_weakref' # <class '_frozen_importlib.BuiltinImporter'>
+# installing zipimport hook
+import 'zipimport' # <class '_frozen_importlib.BuiltinImporter'>
+# installed zipimport hook
+# /usr/lib/python3.5/encodings/__pycache__/__init__.cpython-35.pyc matches /usr/lib/python3.5/encodings/__init__.py
+# code object from '/usr/lib/python3.5/encodings/__pycache__/__init__.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/codecs.cpython-35.pyc matches /usr/lib/python3.5/codecs.py
+# code object from '/usr/lib/python3.5/__pycache__/codecs.cpython-35.pyc'
+import '_codecs' # <class '_frozen_importlib.BuiltinImporter'>
+import 'codecs' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa4ef0f0>
+# /usr/lib/python3.5/encodings/__pycache__/aliases.cpython-35.pyc matches /usr/lib/python3.5/encodings/aliases.py
+# code object from '/usr/lib/python3.5/encodings/__pycache__/aliases.cpython-35.pyc'
+import 'encodings.aliases' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa47eba8>
+import 'encodings' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa4e6cc0>
+# /usr/lib/python3.5/encodings/__pycache__/utf_8.cpython-35.pyc matches /usr/lib/python3.5/encodings/utf_8.py
+# code object from '/usr/lib/python3.5/encodings/__pycache__/utf_8.cpython-35.pyc'
+import 'encodings.utf_8' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa48c978>
+import '_signal' # <class '_frozen_importlib.BuiltinImporter'>
+# /usr/lib/python3.5/encodings/__pycache__/latin_1.cpython-35.pyc matches /usr/lib/python3.5/encodings/latin_1.py
+# code object from '/usr/lib/python3.5/encodings/__pycache__/latin_1.cpython-35.pyc'
+import 'encodings.latin_1' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa48e4a8>
+# /usr/lib/python3.5/__pycache__/io.cpython-35.pyc matches /usr/lib/python3.5/io.py
+# code object from '/usr/lib/python3.5/__pycache__/io.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/abc.cpython-35.pyc matches /usr/lib/python3.5/abc.py
+# code object from '/usr/lib/python3.5/__pycache__/abc.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/_weakrefset.cpython-35.pyc matches /usr/lib/python3.5/_weakrefset.py
+# code object from '/usr/lib/python3.5/__pycache__/_weakrefset.cpython-35.pyc'
+import '_weakrefset' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa494160>
+import 'abc' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa48e940>
+import 'io' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa48e6d8>
+# /usr/lib/python3.5/__pycache__/site.cpython-35.pyc matches /usr/lib/python3.5/site.py
+# code object from '/usr/lib/python3.5/__pycache__/site.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/os.cpython-35.pyc matches /usr/lib/python3.5/os.py
+# code object from '/usr/lib/python3.5/__pycache__/os.cpython-35.pyc'
+import 'errno' # <class '_frozen_importlib.BuiltinImporter'>
+# /usr/lib/python3.5/__pycache__/stat.cpython-35.pyc matches /usr/lib/python3.5/stat.py
+# code object from '/usr/lib/python3.5/__pycache__/stat.cpython-35.pyc'
+import '_stat' # <class '_frozen_importlib.BuiltinImporter'>
+import 'stat' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa4397b8>
+# /usr/lib/python3.5/__pycache__/posixpath.cpython-35.pyc matches /usr/lib/python3.5/posixpath.py
+# code object from '/usr/lib/python3.5/__pycache__/posixpath.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/genericpath.cpython-35.pyc matches /usr/lib/python3.5/genericpath.py
+# code object from '/usr/lib/python3.5/__pycache__/genericpath.cpython-35.pyc'
+import 'genericpath' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa444080>
+import 'posixpath' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa439b00>
+# /usr/lib/python3.5/__pycache__/_collections_abc.cpython-35.pyc matches /usr/lib/python3.5/_collections_abc.py
+# code object from '/usr/lib/python3.5/__pycache__/_collections_abc.cpython-35.pyc'
+import '_collections_abc' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa4446d8>
+import 'os' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa4a3f60>
+# /usr/lib/python3.5/__pycache__/_sitebuiltins.cpython-35.pyc matches /usr/lib/python3.5/_sitebuiltins.py
+# code object from '/usr/lib/python3.5/__pycache__/_sitebuiltins.cpython-35.pyc'
+import '_sitebuiltins' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa4a8278>
+# /usr/lib/python3.5/__pycache__/sysconfig.cpython-35.pyc matches /usr/lib/python3.5/sysconfig.py
+# code object from '/usr/lib/python3.5/__pycache__/sysconfig.cpython-35.pyc'
+import 'sysconfig' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa475e48>
+# /usr/lib/python3.5/__pycache__/_sysconfigdata.cpython-35.pyc matches /usr/lib/python3.5/_sysconfigdata.py
+# code object from '/usr/lib/python3.5/__pycache__/_sysconfigdata.cpython-35.pyc'
+# /usr/lib/python3.5/plat-x86_64-linux-gnu/__pycache__/_sysconfigdata_m.cpython-35.pyc matches /usr/lib/python3.5/plat-x86_64-linux-gnu/_sysconfigdata_m.py
+# code object from '/usr/lib/python3.5/plat-x86_64-linux-gnu/__pycache__/_sysconfigdata_m.cpython-35.pyc'
+import '_sysconfigdata_m' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa402978>
+import '_sysconfigdata' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa402780>
+# /usr/lib/python3.5/__pycache__/sitecustomize.cpython-35.pyc matches /usr/lib/python3.5/sitecustomize.py
+# code object from '/usr/lib/python3.5/__pycache__/sitecustomize.cpython-35.pyc'
+# /usr/lib/python3/dist-packages/__pycache__/apport_python_hook.cpython-35.pyc matches /usr/lib/python3/dist-packages/apport_python_hook.py
+# code object from '/usr/lib/python3/dist-packages/__pycache__/apport_python_hook.cpython-35.pyc'
+import 'apport_python_hook' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa4184e0>
+import 'sitecustomize' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa410b00>
+import 'site' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa49ba58>
+Python 3.5.2 (default, Oct  8 2019, 13:06:37) 
+[GCC 5.4.0 20160609] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+# extension module 'readline' loaded from '/usr/lib/python3.5/lib-dynload/readline.cpython-35m-x86_64-linux-gnu.so'
+# extension module 'readline' executed from '/usr/lib/python3.5/lib-dynload/readline.cpython-35m-x86_64-linux-gnu.so'
+import 'readline' # <_frozen_importlib_external.ExtensionFileLoader object at 0x7f18aa418f98>
+import 'atexit' # <class '_frozen_importlib.BuiltinImporter'>
+# /usr/lib/python3.5/__pycache__/rlcompleter.cpython-35.pyc matches /usr/lib/python3.5/rlcompleter.py
+# code object from '/usr/lib/python3.5/__pycache__/rlcompleter.cpython-35.pyc'
+import 'rlcompleter' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa4210f0>
+>>> mkvirtualenv test
+# /usr/lib/python3.5/__pycache__/re.cpython-35.pyc matches /usr/lib/python3.5/re.py
+# code object from '/usr/lib/python3.5/__pycache__/re.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/sre_compile.cpython-35.pyc matches /usr/lib/python3.5/sre_compile.py
+# code object from '/usr/lib/python3.5/__pycache__/sre_compile.cpython-35.pyc'
+import '_sre' # <class '_frozen_importlib.BuiltinImporter'>
+# /usr/lib/python3.5/__pycache__/sre_parse.cpython-35.pyc matches /usr/lib/python3.5/sre_parse.py
+# code object from '/usr/lib/python3.5/__pycache__/sre_parse.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/sre_constants.cpython-35.pyc matches /usr/lib/python3.5/sre_constants.py
+# code object from '/usr/lib/python3.5/__pycache__/sre_constants.cpython-35.pyc'
+import 'sre_constants' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa42fe10>
+import 'sre_parse' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa42a588>
+import 'sre_compile' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa426588>
+import '_locale' # <class '_frozen_importlib.BuiltinImporter'>
+# /usr/lib/python3.5/__pycache__/copyreg.cpython-35.pyc matches /usr/lib/python3.5/copyreg.py
+# code object from '/usr/lib/python3.5/__pycache__/copyreg.cpython-35.pyc'
+import 'copyreg' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a81c8c18>
+import 're' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa421668>
+# /usr/lib/python3.5/__pycache__/_bootlocale.cpython-35.pyc matches /usr/lib/python3.5/_bootlocale.py
+# code object from '/usr/lib/python3.5/__pycache__/_bootlocale.cpython-35.pyc'
+import '_bootlocale' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a81cc0f0>
+# /usr/lib/python3.5/__pycache__/traceback.cpython-35.pyc matches /usr/lib/python3.5/traceback.py
+# code object from '/usr/lib/python3.5/__pycache__/traceback.cpython-35.pyc'
+# /usr/lib/python3.5/collections/__pycache__/__init__.cpython-35.pyc matches /usr/lib/python3.5/collections/__init__.py
+# code object from '/usr/lib/python3.5/collections/__pycache__/__init__.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/operator.cpython-35.pyc matches /usr/lib/python3.5/operator.py
+# code object from '/usr/lib/python3.5/__pycache__/operator.cpython-35.pyc'
+import '_operator' # <class '_frozen_importlib.BuiltinImporter'>
+import 'operator' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a81f3550>
+# /usr/lib/python3.5/__pycache__/keyword.cpython-35.pyc matches /usr/lib/python3.5/keyword.py
+# code object from '/usr/lib/python3.5/__pycache__/keyword.cpython-35.pyc'
+import 'keyword' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a8183860>
+# /usr/lib/python3.5/__pycache__/heapq.cpython-35.pyc matches /usr/lib/python3.5/heapq.py
+# code object from '/usr/lib/python3.5/__pycache__/heapq.cpython-35.pyc'
+import '_heapq' # <class '_frozen_importlib.BuiltinImporter'>
+import 'heapq' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a8184080>
+import 'itertools' # <class '_frozen_importlib.BuiltinImporter'>
+# /usr/lib/python3.5/__pycache__/reprlib.cpython-35.pyc matches /usr/lib/python3.5/reprlib.py
+# code object from '/usr/lib/python3.5/__pycache__/reprlib.cpython-35.pyc'
+import 'reprlib' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a81844a8>
+import '_collections' # <class '_frozen_importlib.BuiltinImporter'>
+import 'collections' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a81d6080>
+# /usr/lib/python3.5/__pycache__/linecache.cpython-35.pyc matches /usr/lib/python3.5/linecache.py
+# code object from '/usr/lib/python3.5/__pycache__/linecache.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/functools.cpython-35.pyc matches /usr/lib/python3.5/functools.py
+# code object from '/usr/lib/python3.5/__pycache__/functools.cpython-35.pyc'
+import '_functools' # <class '_frozen_importlib.BuiltinImporter'>
+# /usr/lib/python3.5/__pycache__/types.cpython-35.pyc matches /usr/lib/python3.5/types.py
+# code object from '/usr/lib/python3.5/__pycache__/types.cpython-35.pyc'
+# /usr/lib/python3.5/collections/__pycache__/abc.cpython-35.pyc matches /usr/lib/python3.5/collections/abc.py
+# code object from '/usr/lib/python3.5/collections/__pycache__/abc.cpython-35.pyc'
+import 'collections.abc' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a81a87f0>
+import 'types' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a81a81d0>
+# /usr/lib/python3.5/__pycache__/weakref.cpython-35.pyc matches /usr/lib/python3.5/weakref.py
+# code object from '/usr/lib/python3.5/__pycache__/weakref.cpython-35.pyc'
+import 'weakref' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a81d64a8>
+import 'functools' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a81f5160>
+# /usr/lib/python3.5/__pycache__/tokenize.cpython-35.pyc matches /usr/lib/python3.5/tokenize.py
+# code object from '/usr/lib/python3.5/__pycache__/tokenize.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/token.cpython-35.pyc matches /usr/lib/python3.5/token.py
+# code object from '/usr/lib/python3.5/__pycache__/token.cpython-35.pyc'
+import 'token' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a813f438>
+import 'tokenize' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a81f5b38>
+import 'linecache' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a8184f98>
+import 'traceback' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a81cc208>
+# /usr/lib/python3/dist-packages/apport/__pycache__/__init__.cpython-35.pyc matches /usr/lib/python3/dist-packages/apport/__init__.py
+# code object from '/usr/lib/python3/dist-packages/apport/__pycache__/__init__.cpython-35.pyc'
+import 'time' # <class '_frozen_importlib.BuiltinImporter'>
+# /usr/lib/python3/dist-packages/apport/__pycache__/report.cpython-35.pyc matches /usr/lib/python3/dist-packages/apport/report.py
+# code object from '/usr/lib/python3/dist-packages/apport/__pycache__/report.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/subprocess.cpython-35.pyc matches /usr/lib/python3.5/subprocess.py
+# code object from '/usr/lib/python3.5/__pycache__/subprocess.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/signal.cpython-35.pyc matches /usr/lib/python3.5/signal.py
+# code object from '/usr/lib/python3.5/__pycache__/signal.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/enum.cpython-35.pyc matches /usr/lib/python3.5/enum.py
+# code object from '/usr/lib/python3.5/__pycache__/enum.cpython-35.pyc'
+import 'enum' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a816f400>
+import 'signal' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a8164c18>
+# /usr/lib/python3.5/__pycache__/warnings.cpython-35.pyc matches /usr/lib/python3.5/warnings.py
+# code object from '/usr/lib/python3.5/__pycache__/warnings.cpython-35.pyc'
+import 'warnings' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a8164d68>
+import '_posixsubprocess' # <class '_frozen_importlib.BuiltinImporter'>
+import 'select' # <class '_frozen_importlib.BuiltinImporter'>
+# /usr/lib/python3.5/__pycache__/selectors.cpython-35.pyc matches /usr/lib/python3.5/selectors.py
+# code object from '/usr/lib/python3.5/__pycache__/selectors.cpython-35.pyc'
+import 'math' # <class '_frozen_importlib.BuiltinImporter'>
+import 'selectors' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a81077f0>
+# /usr/lib/python3.5/__pycache__/threading.cpython-35.pyc matches /usr/lib/python3.5/threading.py
+# code object from '/usr/lib/python3.5/__pycache__/threading.cpython-35.pyc'
+import 'threading' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a810fa90>
+import 'subprocess' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a815e390>
+# /usr/lib/python3.5/__pycache__/tempfile.cpython-35.pyc matches /usr/lib/python3.5/tempfile.py
+# code object from '/usr/lib/python3.5/__pycache__/tempfile.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/shutil.cpython-35.pyc matches /usr/lib/python3.5/shutil.py
+# code object from '/usr/lib/python3.5/__pycache__/shutil.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/fnmatch.cpython-35.pyc matches /usr/lib/python3.5/fnmatch.py
+# code object from '/usr/lib/python3.5/__pycache__/fnmatch.cpython-35.pyc'
+import 'fnmatch' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa3bcfd0>
+# /usr/lib/python3.5/__pycache__/tarfile.cpython-35.pyc matches /usr/lib/python3.5/tarfile.py
+# code object from '/usr/lib/python3.5/__pycache__/tarfile.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/struct.cpython-35.pyc matches /usr/lib/python3.5/struct.py
+# code object from '/usr/lib/python3.5/__pycache__/struct.cpython-35.pyc'
+import '_struct' # <class '_frozen_importlib.BuiltinImporter'>
+import 'struct' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa3debe0>
+# /usr/lib/python3.5/__pycache__/copy.cpython-35.pyc matches /usr/lib/python3.5/copy.py
+# code object from '/usr/lib/python3.5/__pycache__/copy.cpython-35.pyc'
+import 'copy' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa3def28>
+import 'grp' # <class '_frozen_importlib.BuiltinImporter'>
+import 'pwd' # <class '_frozen_importlib.BuiltinImporter'>
+import 'tarfile' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa3c13c8>
+# /usr/lib/python3.5/__pycache__/bz2.cpython-35.pyc matches /usr/lib/python3.5/bz2.py
+# code object from '/usr/lib/python3.5/__pycache__/bz2.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/_compression.cpython-35.pyc matches /usr/lib/python3.5/_compression.py
+# code object from '/usr/lib/python3.5/__pycache__/_compression.cpython-35.pyc'
+import '_compression' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a80603c8>
+# extension module '_bz2' loaded from '/usr/lib/python3.5/lib-dynload/_bz2.cpython-35m-x86_64-linux-gnu.so'
+# extension module '_bz2' executed from '/usr/lib/python3.5/lib-dynload/_bz2.cpython-35m-x86_64-linux-gnu.so'
+import '_bz2' # <_frozen_importlib_external.ExtensionFileLoader object at 0x7f18a8060cc0>
+import 'bz2' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18aa3c1780>
+# /usr/lib/python3.5/__pycache__/lzma.cpython-35.pyc matches /usr/lib/python3.5/lzma.py
+# code object from '/usr/lib/python3.5/__pycache__/lzma.cpython-35.pyc'
+# extension module '_lzma' loaded from '/usr/lib/python3.5/lib-dynload/_lzma.cpython-35m-x86_64-linux-gnu.so'
+# extension module '_lzma' executed from '/usr/lib/python3.5/lib-dynload/_lzma.cpython-35m-x86_64-linux-gnu.so'
+import '_lzma' # <_frozen_importlib_external.ExtensionFileLoader object at 0x7f18a806c828>
+import 'lzma' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a8060f98>
+import 'shutil' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a813c470>
+# /usr/lib/python3.5/__pycache__/random.cpython-35.pyc matches /usr/lib/python3.5/random.py
+# code object from '/usr/lib/python3.5/__pycache__/random.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/hashlib.cpython-35.pyc matches /usr/lib/python3.5/hashlib.py
+# code object from '/usr/lib/python3.5/__pycache__/hashlib.cpython-35.pyc'
+# extension module '_hashlib' loaded from '/usr/lib/python3.5/lib-dynload/_hashlib.cpython-35m-x86_64-linux-gnu.so'
+# extension module '_hashlib' executed from '/usr/lib/python3.5/lib-dynload/_hashlib.cpython-35m-x86_64-linux-gnu.so'
+import '_hashlib' # <_frozen_importlib_external.ExtensionFileLoader object at 0x7f18a807e080>
+import 'hashlib' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a8078588>
+import '_random' # <class '_frozen_importlib.BuiltinImporter'>
+import 'random' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a813c550>
+import 'tempfile' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a815e2e8>
+# /usr/lib/python3.5/__pycache__/glob.cpython-35.pyc matches /usr/lib/python3.5/glob.py
+# code object from '/usr/lib/python3.5/__pycache__/glob.cpython-35.pyc'
+import 'glob' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a8078ba8>
+# /usr/lib/python3.5/__pycache__/locale.cpython-35.pyc matches /usr/lib/python3.5/locale.py
+# code object from '/usr/lib/python3.5/__pycache__/locale.cpython-35.pyc'
+import 'locale' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a807e710>
+# /usr/lib/python3.5/__pycache__/imp.cpython-35.pyc matches /usr/lib/python3.5/imp.py
+# code object from '/usr/lib/python3.5/__pycache__/imp.cpython-35.pyc'
+# /usr/lib/python3.5/importlib/__pycache__/__init__.cpython-35.pyc matches /usr/lib/python3.5/importlib/__init__.py
+# code object from '/usr/lib/python3.5/importlib/__pycache__/__init__.cpython-35.pyc'
+import 'importlib' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a809cf98>
+# /usr/lib/python3.5/importlib/__pycache__/machinery.cpython-35.pyc matches /usr/lib/python3.5/importlib/machinery.py
+# code object from '/usr/lib/python3.5/importlib/__pycache__/machinery.cpython-35.pyc'
+import 'importlib.machinery' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a71982b0>
+# /usr/lib/python3.5/importlib/__pycache__/util.cpython-35.pyc matches /usr/lib/python3.5/importlib/util.py
+# code object from '/usr/lib/python3.5/importlib/__pycache__/util.cpython-35.pyc'
+# /usr/lib/python3.5/importlib/__pycache__/abc.cpython-35.pyc matches /usr/lib/python3.5/importlib/abc.py
+# code object from '/usr/lib/python3.5/importlib/__pycache__/abc.cpython-35.pyc'
+import 'importlib.abc' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7198b00>
+# /usr/lib/python3.5/__pycache__/contextlib.cpython-35.pyc matches /usr/lib/python3.5/contextlib.py
+# code object from '/usr/lib/python3.5/__pycache__/contextlib.cpython-35.pyc'
+import 'contextlib' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a71a5d30>
+import 'importlib.util' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7198518>
+import 'imp' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a809c6d8>
+# /usr/lib/python3.5/xml/__pycache__/__init__.cpython-35.pyc matches /usr/lib/python3.5/xml/__init__.py
+# code object from '/usr/lib/python3.5/xml/__pycache__/__init__.cpython-35.pyc'
+import 'xml' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a71afe48>
+# /usr/lib/python3.5/xml/dom/__pycache__/__init__.cpython-35.pyc matches /usr/lib/python3.5/xml/dom/__init__.py
+# code object from '/usr/lib/python3.5/xml/dom/__pycache__/__init__.cpython-35.pyc'
+# /usr/lib/python3.5/xml/dom/__pycache__/domreg.cpython-35.pyc matches /usr/lib/python3.5/xml/dom/domreg.py
+# code object from '/usr/lib/python3.5/xml/dom/__pycache__/domreg.cpython-35.pyc'
+import 'xml.dom.domreg' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a71b8940>
+import 'xml.dom' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a71b8080>
+# /usr/lib/python3.5/xml/dom/__pycache__/minidom.cpython-35.pyc matches /usr/lib/python3.5/xml/dom/minidom.py
+# code object from '/usr/lib/python3.5/xml/dom/__pycache__/minidom.cpython-35.pyc'
+# /usr/lib/python3.5/xml/dom/__pycache__/minicompat.cpython-35.pyc matches /usr/lib/python3.5/xml/dom/minicompat.py
+# code object from '/usr/lib/python3.5/xml/dom/__pycache__/minicompat.cpython-35.pyc'
+import 'xml.dom.minicompat' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a715bb00>
+# /usr/lib/python3.5/xml/dom/__pycache__/xmlbuilder.cpython-35.pyc matches /usr/lib/python3.5/xml/dom/xmlbuilder.py
+# code object from '/usr/lib/python3.5/xml/dom/__pycache__/xmlbuilder.cpython-35.pyc'
+# /usr/lib/python3.5/xml/dom/__pycache__/NodeFilter.cpython-35.pyc matches /usr/lib/python3.5/xml/dom/NodeFilter.py
+# code object from '/usr/lib/python3.5/xml/dom/__pycache__/NodeFilter.cpython-35.pyc'
+import 'xml.dom.NodeFilter' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a716fa58>
+import 'xml.dom.xmlbuilder' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a715bf60>
+import 'xml.dom.minidom' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a71b8128>
+# /usr/lib/python3.5/xml/parsers/__pycache__/__init__.cpython-35.pyc matches /usr/lib/python3.5/xml/parsers/__init__.py
+# code object from '/usr/lib/python3.5/xml/parsers/__pycache__/__init__.cpython-35.pyc'
+import 'xml.parsers' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7180320>
+# /usr/lib/python3.5/xml/parsers/__pycache__/expat.cpython-35.pyc matches /usr/lib/python3.5/xml/parsers/expat.py
+# code object from '/usr/lib/python3.5/xml/parsers/__pycache__/expat.cpython-35.pyc'
+import 'pyexpat' # <class '_frozen_importlib.BuiltinImporter'>
+import 'xml.parsers.expat' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7180400>
+# /usr/lib/python3.5/urllib/__pycache__/__init__.cpython-35.pyc matches /usr/lib/python3.5/urllib/__init__.py
+# code object from '/usr/lib/python3.5/urllib/__pycache__/__init__.cpython-35.pyc'
+import 'urllib' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7180780>
+# /usr/lib/python3.5/urllib/__pycache__/error.cpython-35.pyc matches /usr/lib/python3.5/urllib/error.py
+# code object from '/usr/lib/python3.5/urllib/__pycache__/error.cpython-35.pyc'
+# /usr/lib/python3.5/urllib/__pycache__/response.cpython-35.pyc matches /usr/lib/python3.5/urllib/response.py
+# code object from '/usr/lib/python3.5/urllib/__pycache__/response.cpython-35.pyc'
+import 'urllib.response' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7180d30>
+import 'urllib.error' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7180860>
+# /usr/lib/python3.5/urllib/__pycache__/request.cpython-35.pyc matches /usr/lib/python3.5/urllib/request.py
+# code object from '/usr/lib/python3.5/urllib/__pycache__/request.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/base64.cpython-35.pyc matches /usr/lib/python3.5/base64.py
+# code object from '/usr/lib/python3.5/__pycache__/base64.cpython-35.pyc'
+import 'binascii' # <class '_frozen_importlib.BuiltinImporter'>
+import 'base64' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a712dac8>
+# /usr/lib/python3.5/__pycache__/bisect.cpython-35.pyc matches /usr/lib/python3.5/bisect.py
+# code object from '/usr/lib/python3.5/__pycache__/bisect.cpython-35.pyc'
+import '_bisect' # <class '_frozen_importlib.BuiltinImporter'>
+import 'bisect' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7136be0>
+# /usr/lib/python3.5/email/__pycache__/__init__.cpython-35.pyc matches /usr/lib/python3.5/email/__init__.py
+# code object from '/usr/lib/python3.5/email/__pycache__/__init__.cpython-35.pyc'
+import 'email' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7136ba8>
+# /usr/lib/python3.5/http/__pycache__/__init__.cpython-35.pyc matches /usr/lib/python3.5/http/__init__.py
+# code object from '/usr/lib/python3.5/http/__pycache__/__init__.cpython-35.pyc'
+import 'http' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7136fd0>
+# /usr/lib/python3.5/http/__pycache__/client.cpython-35.pyc matches /usr/lib/python3.5/http/client.py
+# code object from '/usr/lib/python3.5/http/__pycache__/client.cpython-35.pyc'
+# /usr/lib/python3.5/email/__pycache__/parser.cpython-35.pyc matches /usr/lib/python3.5/email/parser.py
+# code object from '/usr/lib/python3.5/email/__pycache__/parser.cpython-35.pyc'
+# /usr/lib/python3.5/email/__pycache__/feedparser.cpython-35.pyc matches /usr/lib/python3.5/email/feedparser.py
+# code object from '/usr/lib/python3.5/email/__pycache__/feedparser.cpython-35.pyc'
+# /usr/lib/python3.5/email/__pycache__/errors.cpython-35.pyc matches /usr/lib/python3.5/email/errors.py
+# code object from '/usr/lib/python3.5/email/__pycache__/errors.cpython-35.pyc'
+import 'email.errors' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a70d6cf8>
+# /usr/lib/python3.5/email/__pycache__/message.cpython-35.pyc matches /usr/lib/python3.5/email/message.py
+# code object from '/usr/lib/python3.5/email/__pycache__/message.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/uu.cpython-35.pyc matches /usr/lib/python3.5/uu.py
+# code object from '/usr/lib/python3.5/__pycache__/uu.cpython-35.pyc'
+import 'uu' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a70f74a8>
+# /usr/lib/python3.5/__pycache__/quopri.cpython-35.pyc matches /usr/lib/python3.5/quopri.py
+# code object from '/usr/lib/python3.5/__pycache__/quopri.cpython-35.pyc'
+import 'quopri' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a70f75f8>
+# /usr/lib/python3.5/email/__pycache__/utils.cpython-35.pyc matches /usr/lib/python3.5/email/utils.py
+# code object from '/usr/lib/python3.5/email/__pycache__/utils.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/socket.cpython-35.pyc matches /usr/lib/python3.5/socket.py
+# code object from '/usr/lib/python3.5/__pycache__/socket.cpython-35.pyc'
+import '_socket' # <class '_frozen_importlib.BuiltinImporter'>
+import 'socket' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7101c88>
+# /usr/lib/python3.5/__pycache__/datetime.cpython-35.pyc matches /usr/lib/python3.5/datetime.py
+# code object from '/usr/lib/python3.5/__pycache__/datetime.cpython-35.pyc'
+import '_datetime' # <class '_frozen_importlib.BuiltinImporter'>
+import 'datetime' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a71082b0>
+# /usr/lib/python3.5/urllib/__pycache__/parse.cpython-35.pyc matches /usr/lib/python3.5/urllib/parse.py
+# code object from '/usr/lib/python3.5/urllib/__pycache__/parse.cpython-35.pyc'
+import 'urllib.parse' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a709a048>
+# /usr/lib/python3.5/email/__pycache__/_parseaddr.cpython-35.pyc matches /usr/lib/python3.5/email/_parseaddr.py
+# code object from '/usr/lib/python3.5/email/__pycache__/_parseaddr.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/calendar.cpython-35.pyc matches /usr/lib/python3.5/calendar.py
+# code object from '/usr/lib/python3.5/__pycache__/calendar.cpython-35.pyc'
+import 'calendar' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7072f28>
+import 'email._parseaddr' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7052198>
+# /usr/lib/python3.5/email/__pycache__/charset.cpython-35.pyc matches /usr/lib/python3.5/email/charset.py
+# code object from '/usr/lib/python3.5/email/__pycache__/charset.cpython-35.pyc'
+# /usr/lib/python3.5/email/__pycache__/base64mime.cpython-35.pyc matches /usr/lib/python3.5/email/base64mime.py
+# code object from '/usr/lib/python3.5/email/__pycache__/base64mime.cpython-35.pyc'
+import 'email.base64mime' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7064a58>
+# /usr/lib/python3.5/email/__pycache__/quoprimime.cpython-35.pyc matches /usr/lib/python3.5/email/quoprimime.py
+# code object from '/usr/lib/python3.5/email/__pycache__/quoprimime.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/string.cpython-35.pyc matches /usr/lib/python3.5/string.py
+# code object from '/usr/lib/python3.5/__pycache__/string.cpython-35.pyc'
+import '_string' # <class '_frozen_importlib.BuiltinImporter'>
+import 'string' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7074390>
+import 'email.quoprimime' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7064c88>
+# /usr/lib/python3.5/email/__pycache__/encoders.cpython-35.pyc matches /usr/lib/python3.5/email/encoders.py
+# code object from '/usr/lib/python3.5/email/__pycache__/encoders.cpython-35.pyc'
+import 'email.encoders' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a707e518>
+import 'email.charset' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a705feb8>
+import 'email.utils' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a70f7be0>
+# /usr/lib/python3.5/email/__pycache__/_policybase.cpython-35.pyc matches /usr/lib/python3.5/email/_policybase.py
+# code object from '/usr/lib/python3.5/email/__pycache__/_policybase.cpython-35.pyc'
+# /usr/lib/python3.5/email/__pycache__/header.cpython-35.pyc matches /usr/lib/python3.5/email/header.py
+# code object from '/usr/lib/python3.5/email/__pycache__/header.cpython-35.pyc'
+import 'email.header' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a707ee10>
+import 'email._policybase' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7101b38>
+# /usr/lib/python3.5/email/__pycache__/_encoded_words.cpython-35.pyc matches /usr/lib/python3.5/email/_encoded_words.py
+# code object from '/usr/lib/python3.5/email/__pycache__/_encoded_words.cpython-35.pyc'
+import 'email._encoded_words' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7087f28>
+# /usr/lib/python3.5/email/__pycache__/iterators.cpython-35.pyc matches /usr/lib/python3.5/email/iterators.py
+# code object from '/usr/lib/python3.5/email/__pycache__/iterators.cpython-35.pyc'
+import 'email.iterators' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7014630>
+import 'email.message' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a70d6e10>
+import 'email.feedparser' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7148f60>
+import 'email.parser' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7148b70>
+# /usr/lib/python3.5/__pycache__/ssl.cpython-35.pyc matches /usr/lib/python3.5/ssl.py
+# code object from '/usr/lib/python3.5/__pycache__/ssl.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/ipaddress.cpython-35.pyc matches /usr/lib/python3.5/ipaddress.py
+# code object from '/usr/lib/python3.5/__pycache__/ipaddress.cpython-35.pyc'
+import 'ipaddress' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7025b70>
+# /usr/lib/python3.5/__pycache__/textwrap.cpython-35.pyc matches /usr/lib/python3.5/textwrap.py
+# code object from '/usr/lib/python3.5/__pycache__/textwrap.cpython-35.pyc'
+import 'textwrap' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7049128>
+# extension module '_ssl' loaded from '/usr/lib/python3.5/lib-dynload/_ssl.cpython-35m-x86_64-linux-gnu.so'
+# extension module '_ssl' executed from '/usr/lib/python3.5/lib-dynload/_ssl.cpython-35m-x86_64-linux-gnu.so'
+import '_ssl' # <_frozen_importlib_external.ExtensionFileLoader object at 0x7f18a70acda0>
+import 'ssl' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7014ac8>
+import 'http.client' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a713c438>
+import 'urllib.request' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a718b5f8>
+# /usr/lib/python3/dist-packages/__pycache__/problem_report.cpython-35.pyc matches /usr/lib/python3/dist-packages/problem_report.py
+# code object from '/usr/lib/python3/dist-packages/__pycache__/problem_report.cpython-35.pyc'
+import 'zlib' # <class '_frozen_importlib.BuiltinImporter'>
+# /usr/lib/python3.5/__pycache__/gzip.cpython-35.pyc matches /usr/lib/python3.5/gzip.py
+# code object from '/usr/lib/python3.5/__pycache__/gzip.cpython-35.pyc'
+import 'gzip' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a6ff4160>
+# /usr/lib/python3.5/email/mime/__pycache__/__init__.cpython-35.pyc matches /usr/lib/python3.5/email/mime/__init__.py
+# code object from '/usr/lib/python3.5/email/mime/__pycache__/__init__.cpython-35.pyc'
+import 'email.mime' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a6fff358>
+# /usr/lib/python3.5/email/mime/__pycache__/multipart.cpython-35.pyc matches /usr/lib/python3.5/email/mime/multipart.py
+# code object from '/usr/lib/python3.5/email/mime/__pycache__/multipart.cpython-35.pyc'
+# /usr/lib/python3.5/email/mime/__pycache__/base.cpython-35.pyc matches /usr/lib/python3.5/email/mime/base.py
+# code object from '/usr/lib/python3.5/email/mime/__pycache__/base.cpython-35.pyc'
+import 'email.mime.base' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a6fff5c0>
+import 'email.mime.multipart' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a6fff470>
+# /usr/lib/python3.5/email/mime/__pycache__/text.cpython-35.pyc matches /usr/lib/python3.5/email/mime/text.py
+# code object from '/usr/lib/python3.5/email/mime/__pycache__/text.cpython-35.pyc'
+# /usr/lib/python3.5/email/mime/__pycache__/nonmultipart.cpython-35.pyc matches /usr/lib/python3.5/email/mime/nonmultipart.py
+# code object from '/usr/lib/python3.5/email/mime/__pycache__/nonmultipart.cpython-35.pyc'
+import 'email.mime.nonmultipart' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a6fff780>
+import 'email.mime.text' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a6fff588>
+import 'problem_report' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a712d390>
+# /usr/lib/python3/dist-packages/apport/__pycache__/fileutils.cpython-35.pyc matches /usr/lib/python3/dist-packages/apport/fileutils.py
+# code object from '/usr/lib/python3/dist-packages/apport/__pycache__/fileutils.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/configparser.cpython-35.pyc matches /usr/lib/python3.5/configparser.py
+# code object from '/usr/lib/python3.5/__pycache__/configparser.cpython-35.pyc'
+import 'configparser' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a70052e8>
+# /usr/lib/python3/dist-packages/apport/__pycache__/packaging_impl.cpython-35.pyc matches /usr/lib/python3/dist-packages/apport/packaging_impl.py
+# code object from '/usr/lib/python3/dist-packages/apport/__pycache__/packaging_impl.cpython-35.pyc'
+# /usr/lib/python3.5/json/__pycache__/__init__.cpython-35.pyc matches /usr/lib/python3.5/json/__init__.py
+# code object from '/usr/lib/python3.5/json/__pycache__/__init__.cpython-35.pyc'
+# /usr/lib/python3.5/json/__pycache__/decoder.cpython-35.pyc matches /usr/lib/python3.5/json/decoder.py
+# code object from '/usr/lib/python3.5/json/__pycache__/decoder.cpython-35.pyc'
+# /usr/lib/python3.5/json/__pycache__/scanner.cpython-35.pyc matches /usr/lib/python3.5/json/scanner.py
+# code object from '/usr/lib/python3.5/json/__pycache__/scanner.cpython-35.pyc'
+# extension module '_json' loaded from '/usr/lib/python3.5/lib-dynload/_json.cpython-35m-x86_64-linux-gnu.so'
+# extension module '_json' executed from '/usr/lib/python3.5/lib-dynload/_json.cpython-35m-x86_64-linux-gnu.so'
+import '_json' # <_frozen_importlib_external.ExtensionFileLoader object at 0x7f18a6b2fba8>
+import 'json.scanner' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a6b2f860>
+import 'json.decoder' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a6b2f198>
+# /usr/lib/python3.5/json/__pycache__/encoder.cpython-35.pyc matches /usr/lib/python3.5/json/encoder.py
+# code object from '/usr/lib/python3.5/json/__pycache__/encoder.cpython-35.pyc'
+import 'json.encoder' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a6b2f6d8>
+import 'json' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a6b26eb8>
+# /usr/lib/python3/dist-packages/apt/__pycache__/__init__.cpython-35.pyc matches /usr/lib/python3/dist-packages/apt/__init__.py
+# code object from '/usr/lib/python3/dist-packages/apt/__pycache__/__init__.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/__future__.cpython-35.pyc matches /usr/lib/python3.5/__future__.py
+# code object from '/usr/lib/python3.5/__pycache__/__future__.cpython-35.pyc'
+import '__future__' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a6b38d68>
+# extension module 'apt_pkg' loaded from '/usr/lib/python3/dist-packages/apt_pkg.cpython-35m-x86_64-linux-gnu.so'
+# extension module 'apt_pkg' executed from '/usr/lib/python3/dist-packages/apt_pkg.cpython-35m-x86_64-linux-gnu.so'
+import 'apt_pkg' # <_frozen_importlib_external.ExtensionFileLoader object at 0x7f18a6b3d240>
+# /usr/lib/python3/dist-packages/apt/__pycache__/package.cpython-35.pyc matches /usr/lib/python3/dist-packages/apt/package.py
+# code object from '/usr/lib/python3/dist-packages/apt/__pycache__/package.cpython-35.pyc'
+# /usr/lib/python3/dist-packages/apt/progress/__pycache__/__init__.cpython-35.pyc matches /usr/lib/python3/dist-packages/apt/progress/__init__.py
+# code object from '/usr/lib/python3/dist-packages/apt/progress/__pycache__/__init__.cpython-35.pyc'
+import 'apt.progress' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a593dfd0>
+# /usr/lib/python3/dist-packages/apt/progress/__pycache__/text.cpython-35.pyc matches /usr/lib/python3/dist-packages/apt/progress/text.py
+# code object from '/usr/lib/python3/dist-packages/apt/progress/__pycache__/text.cpython-35.pyc'
+# /usr/lib/python3/dist-packages/apt/progress/__pycache__/base.cpython-35.pyc matches /usr/lib/python3/dist-packages/apt/progress/base.py
+# code object from '/usr/lib/python3/dist-packages/apt/progress/__pycache__/base.cpython-35.pyc'
+import 'fcntl' # <class '_frozen_importlib.BuiltinImporter'>
+import 'apt.progress.base' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a5942b38>
+import 'apt.progress.text' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a5942198>
+import 'apt.package' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a6b4ba20>
+# /usr/lib/python3/dist-packages/apt/__pycache__/cache.cpython-35.pyc matches /usr/lib/python3/dist-packages/apt/cache.py
+# code object from '/usr/lib/python3/dist-packages/apt/__pycache__/cache.cpython-35.pyc'
+import 'apt.cache' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a5930048>
+# /usr/lib/python3/dist-packages/apt/__pycache__/cdrom.cpython-35.pyc matches /usr/lib/python3/dist-packages/apt/cdrom.py
+# code object from '/usr/lib/python3/dist-packages/apt/__pycache__/cdrom.cpython-35.pyc'
+import 'apt.cdrom' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a595ec88>
+import 'apt' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a6b38ba8>
+# /usr/lib/python3.5/__pycache__/pickle.cpython-35.pyc matches /usr/lib/python3.5/pickle.py
+# code object from '/usr/lib/python3.5/__pycache__/pickle.cpython-35.pyc'
+# /usr/lib/python3.5/__pycache__/_compat_pickle.cpython-35.pyc matches /usr/lib/python3.5/_compat_pickle.py
+# code object from '/usr/lib/python3.5/__pycache__/_compat_pickle.cpython-35.pyc'
+import '_compat_pickle' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a80df518>
+import '_pickle' # <class '_frozen_importlib.BuiltinImporter'>
+import 'pickle' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a6b38c50>
+# /usr/lib/python3/dist-packages/apport/__pycache__/packaging.cpython-35.pyc matches /usr/lib/python3/dist-packages/apport/packaging.py
+# code object from '/usr/lib/python3/dist-packages/apport/__pycache__/packaging.cpython-35.pyc'
+import 'apport.packaging' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a80df2b0>
+import 'apport.packaging_impl' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a6b14fd0>
+import 'apport.fileutils' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a6fff9e8>
+import 'apport.report' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a8141588>
+# /usr/lib/python3.5/__pycache__/gettext.cpython-35.pyc matches /usr/lib/python3.5/gettext.py
+# code object from '/usr/lib/python3.5/__pycache__/gettext.cpython-35.pyc'
+import 'gettext' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a7005208>
+import 'apport' # <_frozen_importlib_external.SourceFileLoader object at 0x7f18a81b6e80>
+  File "<stdin>", line 1
+    mkvirtualenv test
+                    ^
+SyntaxError: invalid syntax
+>>> 
+[1]+  Stopped                 python3 -v
+aspire1015@aspire1015-ThinkCentre-M71e:~$ mkvirtualenv test
+mkvirtualenv: command not found
+aspire1015@aspire1015-ThinkCentre-M71e:~$ apt install python3-pip
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+aspire1015@aspire1015-ThinkCentre-M71e:~$ apt install python-pip
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+aspire1015@aspire1015-ThinkCentre-M71e:~$ yum install epel-release
+The program 'yum' is currently not installed. You can install it by typing:
+sudo apt install yum
+aspire1015@aspire1015-ThinkCentre-M71e:~$ sudpo apt-get install python3 -pip
+No command 'sudpo' found, did you mean:
+ Command 'sudo' from package 'sudo-ldap' (universe)
+ Command 'sudo' from package 'sudo' (main)
+sudpo: command not found
+aspire1015@aspire1015-ThinkCentre-M71e:~$ sudpo apt-get install python3-pip
+No command 'sudpo' found, did you mean:
+ Command 'sudo' from package 'sudo' (main)
+ Command 'sudo' from package 'sudo-ldap' (universe)
+sudpo: command not found
+aspire1015@aspire1015-ThinkCentre-M71e:~$ sudo apt-get install python3-pip
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  linux-headers-4.15.0-29 linux-headers-4.15.0-29-generic
+  linux-headers-4.15.0-72 linux-headers-4.15.0-72-generic
+  linux-image-4.15.0-29-generic linux-image-4.15.0-72-generic
+  linux-modules-4.15.0-29-generic linux-modules-4.15.0-72-generic
+  linux-modules-extra-4.15.0-29-generic linux-modules-extra-4.15.0-72-generic
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  libpython3-dev libpython3.5-dev python3-dev python3-setuptools python3-wheel
+  python3.5-dev
+Suggested packages:
+  python-setuptools-doc
+The following NEW packages will be installed:
+  libpython3-dev libpython3.5-dev python3-dev python3-pip python3-setuptools
+  python3-wheel python3.5-dev
+0 upgraded, 7 newly installed, 0 to remove and 117 not upgraded.
+Need to get 38.0 MB of archives.
+After this operation, 55.2 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython3.5-dev amd64 3.5.2-2ubuntu0~16.04.9 [37.3 MB]
+Get:2 http://in.archive.ubuntu.com/ubuntu xenial/main amd64 libpython3-dev amd64 3.5.1-3 [6,926 B]
+Get:3 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 python3.5-dev amd64 3.5.2-2ubuntu0~16.04.9 [413 kB]
+Get:4 http://in.archive.ubuntu.com/ubuntu xenial/main amd64 python3-dev amd64 3.5.1-3 [1,186 B]
+Get:5 http://in.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 python3-pip all 8.1.1-2ubuntu0.4 [109 kB]
+Get:6 http://in.archive.ubuntu.com/ubuntu xenial/main amd64 python3-setuptools all 20.7.0-1 [88.0 kB]
+Get:7 http://in.archive.ubuntu.com/ubuntu xenial/universe amd64 python3-wheel all 0.29.0-1 [48.1 kB]
+Fetched 38.0 MB in 2min 36s (243 kB/s)                                         
+Selecting previously unselected package libpython3.5-dev:amd64.
+(Reading database ... 289956 files and directories currently installed.)
+Preparing to unpack .../libpython3.5-dev_3.5.2-2ubuntu0~16.04.9_amd64.deb ...
+Unpacking libpython3.5-dev:amd64 (3.5.2-2ubuntu0~16.04.9) ...
+Selecting previously unselected package libpython3-dev:amd64.
+Preparing to unpack .../libpython3-dev_3.5.1-3_amd64.deb ...
+Unpacking libpython3-dev:amd64 (3.5.1-3) ...
+Selecting previously unselected package python3.5-dev.
+Preparing to unpack .../python3.5-dev_3.5.2-2ubuntu0~16.04.9_amd64.deb ...
+Unpacking python3.5-dev (3.5.2-2ubuntu0~16.04.9) ...
+Selecting previously unselected package python3-dev.
+Preparing to unpack .../python3-dev_3.5.1-3_amd64.deb ...
+Unpacking python3-dev (3.5.1-3) ...
+Selecting previously unselected package python3-pip.
+Preparing to unpack .../python3-pip_8.1.1-2ubuntu0.4_all.deb ...
+Unpacking python3-pip (8.1.1-2ubuntu0.4) ...
+Selecting previously unselected package python3-setuptools.
+Preparing to unpack .../python3-setuptools_20.7.0-1_all.deb ...
+Unpacking python3-setuptools (20.7.0-1) ...
+Selecting previously unselected package python3-wheel.
+Preparing to unpack .../python3-wheel_0.29.0-1_all.deb ...
+Unpacking python3-wheel (0.29.0-1) ...
+Processing triggers for man-db (2.7.5-1) ...
+Setting up libpython3.5-dev:amd64 (3.5.2-2ubuntu0~16.04.9) ...
+Setting up libpython3-dev:amd64 (3.5.1-3) ...
+Setting up python3.5-dev (3.5.2-2ubuntu0~16.04.9) ...
+Setting up python3-dev (3.5.1-3) ...
+Setting up python3-pip (8.1.1-2ubuntu0.4) ...
+Setting up python3-setuptools (20.7.0-1) ...
+Setting up python3-wheel (0.29.0-1) ...
+aspire1015@aspire1015-ThinkCentre-M71e:~$ python --version
+Python 2.7.12
+aspire1015@aspire1015-ThinkCentre-M71e:~$ sudo pip3 install virtualenv
+The directory '/home/aspire1015/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/home/aspire1015/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting virtualenv
+  Downloading https://files.pythonhosted.org/packages/05/f1/2e07e8ca50e047b9cc9ad56cf4291f4e041fa73207d000a095fe478abf84/virtualenv-16.7.9-py2.py3-none-any.whl (3.4MB)
+    100% |████████████████████████████████| 3.4MB 160kB/s 
+Installing collected packages: virtualenv
+Successfully installed virtualenv-16.7.9
+You are using pip version 8.1.1, however version 20.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+aspire1015@aspire1015-ThinkCentre-M71e:~$ pip install --upgrade pip
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. A future version of pip will drop support for Python 2.7. More details about Python 2 support in pip, can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already up-to-date: pip in ./.local/lib/python2.7/site-packages (20.0.2)
+aspire1015@aspire1015-ThinkCentre-M71e:~$ virtualenv test
+New python executable in /home/aspire1015/test/bin/python
+Installing setuptools, pip, wheel...
+done.
+aspire1015@aspire1015-ThinkCentre-M71e:~$ mkvirtualenv test
+mkvirtualenv: command not found
+aspire1015@aspire1015-ThinkCentre-M71e:~$ virtualenv -p /usr/bin/python2.7 test
+Running virtualenv with interpreter /usr/bin/python2.7
+Already using interpreter /usr/bin/python2.7
+New python executable in /home/aspire1015/test/bin/python2.7
+Not overwriting existing python script /home/aspire1015/test/bin/python (you must use /home/aspire1015/test/bin/python2.7)
+Traceback (most recent call last):
+  File "/home/aspire1015/.local/lib/python2.7/site-packages/virtualenv.py", line 2634, in <module>
+    main()
+  File "/home/aspire1015/.local/lib/python2.7/site-packages/virtualenv.py", line 870, in main
+    symlink=options.symlink,
+  File "/home/aspire1015/.local/lib/python2.7/site-packages/virtualenv.py", line 1162, in create_environment
+    install_python(home_dir, lib_dir, inc_dir, bin_dir, site_packages=site_packages, clear=clear, symlink=symlink)
+  File "/home/aspire1015/.local/lib/python2.7/site-packages/virtualenv.py", line 1672, in install_python
+    os.symlink(py_executable_base, full_pth)
+OSError: [Errno 17] File exists
+aspire1015@aspire1015-ThinkCentre-M71e:~$ virtualenv -p /usr/bin/python2.7 test
+Running virtualenv with interpreter /usr/bin/python2.7
+Already using interpreter /usr/bin/python2.7
+New python executable in /home/aspire1015/test/bin/python2.7
+Traceback (most recent call last):
+  File "/home/aspire1015/.local/lib/python2.7/site-packages/virtualenv.py", line 2634, in <module>
+    main()
+  File "/home/aspire1015/.local/lib/python2.7/site-packages/virtualenv.py", line 870, in main
+    symlink=options.symlink,
+  File "/home/aspire1015/.local/lib/python2.7/site-packages/virtualenv.py", line 1162, in create_environment
+    install_python(home_dir, lib_dir, inc_dir, bin_dir, site_packages=site_packages, clear=clear, symlink=symlink)
+  File "/home/aspire1015/.local/lib/python2.7/site-packages/virtualenv.py", line 1532, in install_python
+    shutil.copyfile(executable, py_executable)
+  File "/usr/lib/python2.7/shutil.py", line 83, in copyfile
+    with open(dst, 'wb') as fdst:
+IOError: [Errno 40] Too many levels of symbolic links: '/home/aspire1015/test/bin/python2.7'
+aspire1015@aspire1015-ThinkCentre-M71e:~$ source venv/bin/activate
+bash: venv/bin/activate: No such file or directory
+aspire1015@aspire1015-ThinkCentre-M71e:~$ pip install django
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. A future version of pip will drop support for Python 2.7. More details about Python 2 support in pip, can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: django in ./.local/lib/python2.7/site-packages (1.11.28)
+Requirement already satisfied: pytz in ./.local/lib/python2.7/site-packages (from django) (2019.3)
+aspire1015@aspire1015-ThinkCentre-M71e:~$ django-admin --version
+1.11.28
+aspire1015@aspire1015-ThinkCentre-M71e:~$ mkdir projects
+aspire1015@aspire1015-ThinkCentre-M71e:~$ cd projects
+aspire1015@aspire1015-ThinkCentre-M71e:~/projects$ django-admin startproject telsuko
+aspire1015@aspire1015-ThinkCentre-M71e:~/projects$ cd telusko
+bash: cd: telusko: No such file or directory
+aspire1015@aspire1015-ThinkCentre-M71e:~/projects$ ls
+telsuko
+aspire1015@aspire1015-ThinkCentre-M71e:~/projects$ cd telusko
+bash: cd: telusko: No such file or directory
+aspire1015@aspire1015-ThinkCentre-M71e:~/projects$ cd telsuko
+aspire1015@aspire1015-ThinkCentre-M71e:~/projects/telsuko$ ls
+manage.py  telsuko
+aspire1015@aspire1015-ThinkCentre-M71e:~/projects/telsuko$ python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+February 05, 2020 - 05:04:33
+Django version 1.11.28, using settings 'telsuko.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+================================================
+<html>
+    <head>
+        <title> MY First Page</title>
+        <script src="demo.js">
+            // this script is in next page
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
+document.write("<h1>External file</h1>");
+  var num=16
+  var name="Abinaya"
+  var flag=true
+  document.write(num+","+name+","+flag)
+  function addnum(a,b)
+  {
+      var c=a+b;
+      return c;
+  }
+  result=addnum(10,15);
+  document.write(result);
+  var car={
+      car_name:"Audi",
+      car_colour:"yellow",
+       car_model:"3500",
+       telsla:function()
+      {
+        document.write(car_name+","+car_model+","+car_colour);
+      }
+    }
+    car.telsal();
+    document.write("<h2>"+car.car_name+"</h2>")
+=================================================
+<html>
+    <head>
+        <title> MY First Page</title>
+        <script >
+             function func1()
+            {
+                var select=document.getElementById("selected box");
+                alert(select.options[select.selectedIndex].value)
+
+            }
+        </script>
+    </head>
+    <body>
+        <select id="selected box">
+            <option value="Veg" >veg</option>
+            <option value="nonveg">non veg</option>
+        </select>        
+        <button onclick="func1()"> Onclick</button>
+    </body>
+</html>
+    
+

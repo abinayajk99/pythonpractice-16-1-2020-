@@ -1,0 +1,226 @@
+class car(): 
+      
+  
+    def __init__(self, model, color): 
+        self.model = model 
+        self.color = color 
+          
+    def show(self): 
+        print("Model is", self.model ) 
+        print("color is", self.color ) 
+          
+
+audi = car("audi a4", "blue") 
+ferrari = car("ferrari 488", "green") 
+  
+audi.show()    
+ferrari.show()  
+  
+Model is audi a4
+color is blue
+Model is ferrari 488
+color is green
+class car(): 
+      
+  
+    def __init__(self, model, color): 
+        self.model = model 
+        self.color = color 
+          
+    def show(self): 
+        print("Model is", self.model ) 
+        print("color is", self.color ) 
+          
+
+audi = car("audi a4", "blue") 
+ferrari = car("ferrari 488", "green") 
+  
+audi.show()    
+ferrari.show()  
+  
+Model is audi a4
+color is blue
+Model is ferrari 488
+color is green
+
+
+==============================================CLASSES METHODS=========================================================
+class Student: 
+      
+    # creating a variable 
+    name = "Geeksforgeeks"
+      
+    # creating a function 
+    def print_name(obj): 
+        print("The name is : ", obj.name) 
+          
+
+Student.print_name = classmethod(Student.print_name) 
+
+Student.print_name() 
+..............................................................................
+Python program to understand classmethod 
+  
+class Subject: 
+      
+    # creating a variable 
+    favorite_subject = "Networking"
+      
+    # creating a function 
+    def favorite_subject_name(obj): 
+        print("My favorite_subject_name is : ", 
+                           obj.favorite_subject) 
+          
+# creating favorite_subject_name classmethod 
+# before creating this line favorite_subject_name() 
+# can be called only with object not with class 
+Subject.favorite_subject_name = classmethod(Subject.favorite_subject_name) 
+  
+# now this method can be call as classmethod 
+# favorite_subject_name() method is called as class method 
+Subject.favorite_subject_name() 
+......................................................................................
+Python program to demonstrate  
+# use of class method and static method. 
+from datetime import date 
+  
+class Person: 
+    def __init__(self, name, age): 
+        self.name = name 
+        self.age = age 
+      
+    # a class method to create a  
+    # Person object by birth year. 
+    @classmethod
+    def fromBirthYear(cls, name, year): 
+        return cls(name, date.today().year - year) 
+      
+    # a static method to check if a 
+    # Person is adult or not. 
+    @staticmethod
+    def isAdult(age): 
+        return age > 18
+  
+person1 = Person('mayank', 21) 
+person2 = Person.fromBirthYear('mayank', 1996) 
+  
+print (person1.age) 
+print (person2.age) 
+  
+# print the result 
+print (Person.isAdult(22)) 
+================================================STATIC METHODS===============================================================================
+
+
+
+class Calculator:
+
+    def multiplyNums(x, y):
+        return x + y
+
+# create addNumbers static method
+Calculator.multiplyNums = staticmethod(Calculator.multiplyNums)
+
+print('Product:', Calculator.multiplyNums(15, 110))
+
+
+
+
+
+
+
+
+class Calculator:
+
+   
+    @staticmethod
+    def multiplyNums(x, y):
+        return x + y
+
+print('Product:', Calculator.multiplyNums(15, 110))
+
+
+========================================================INSTANCE METHOD===============================================================================
+
+
+class Pizza:
+    def __init__(self, ingredients):
+        self.ingredients = ingredients
+
+    def __repr__(self):
+        return f'Pizza({self.ingredients!r})'
+
+>>> Pizza(['cheese', 'tomatoes'])
+Pizza(['cheese', 'tomatoes'])
+
+==============================================================MAP FUNCTION======================================================================import 
+>>> def area(r):
+...     '''Are of a circle'''
+...     return math.pi * (r**2)
+... 
+>>> radii=[2,5,7.1,0.3,10]
+>>> #method1:direct method
+... 
+areas=[]
+>>> for r in radii:
+...     a=area(r)
+...     areas.append(a)
+>>>areas
+[12,78.......]
+
+>>>#method 2:using map
+...
+>>>map(area,radii]
+<map object at 0x01DA1EB0>
+>>>list(map(area,radii))
+
+>>> x=lambda x:x**2
+>>> x(9)
+81
+>>> x=lambda x in range(0,z):x**2
+  File "<stdin>", line 1
+    x=lambda x in range(0,z):x**2
+                ^
+SyntaxError: invalid syntax
+>>> x([1,2,3,4])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 1, in <lambda>
+TypeError: unsupported operand type(s) for ** or pow(): 'list' and 'int'
+>>> for i in range(0,5):
+...     print(x(i))
+... 
+0
+1
+4
+9
+16
+>>> (lambda x: x + 1)(2)
+3
+temp=[("A",29),("b",36),("C",28)]
+>>> ctof=lambda data:(data[0],(9/5)*data[1]+32)
+>>> list(map(ctof,temp))
+[('A', 61), ('b', 68), ('C', 60)]
+>>> 
+
+=======================================================FILTER===================================================================================
+avg=2.1
+>>> data=[1.3,2.7,0.8,4.1,4.3,-0.1]
+>>> filter(lambda x:x>avg,data)
+[2.7, 4.1, 4.3]
+>>> filter(lambda x:x<avg,data)
+[1.3, 0.8, -0.1]
+>>> #remove missing values
+... 
+>>> c=["","A","V","C","",""]
+>>> list(filter(None,c))
+['A', 'V', 'C']
+>>> m=list(map(x,range(0,10)))
+>>> m
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+>>> filter(lambda x:x>20,m)
+<filter object at 0x7f16ca7d4dd8>
+>>> list(filter(lambda x:x>20,m))
+[25, 36, 49, 64, 81]
+>>> 
+

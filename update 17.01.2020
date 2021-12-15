@@ -1,0 +1,223 @@
+					//ITERATOR
+
+class top:
+    def __init__(self):
+        self.count=1
+    def __iter__(self):
+        return self
+    def __next__(self):
+        if self.count<=10:
+            val=self.count
+            self.count+=1
+            return self.count
+        else:
+            raise StopIteration
+val=top()
+print(next(val))
+for i in val:
+    print(i)
+===========================================================================================================================================
+				//Generator
+def reverse(data):
+    for index in range(len(data)-1,-1,-1):
+        yield data[index]
+for char in reverse('golf'):
+     print (char)
+
+def reverse(data):
+    for index in range(len(data)-1,-1,-1):
+        yield data[index]
+for char in reverse('golf'):
+     print (char)
+====================================================Exceptional handling===================================================================
+a=5
+b=8
+try:
+    print("conn open")
+    print(a/b)
+    k=(int(input("enter a value")))
+    print(k)
+except ZeroDivisionError as e:
+    print("divide by zero erro")
+except ValueError as e:
+    print(" give the correct type of value ")
+except Exception as e:
+    print("unkow error",e)
+finally:
+    print("conn closed ")
+============================================================MODULE===================================================================
+from math import sqrt, factorial 
+  
+# if we simply do "import math", then 
+# math.sqrt(16) and math.factorial() 
+# are required. 
+print (sqrt(16)) 
+print (factorial(6)) 
+
+====================================================================================================================================
+#to know the functions or packages in module use dir
+import random
+print(dir(random))
+
+op:['BEF', 'LOG4', 'NV_MAGICCONST', 'RECIP_BPF', 'Random', 'SG_MAGICCONST', 'SystemRandom', 'TWOPI', '_BuiltinMethodType', 
+'_MethodType', '_Sequence', '_Set', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__nam
+e__', '__package__', '__spec__', '_acos', '_ceil', '_cos', '_e', '_exp', '_inst', '_log', '_pi', '_random', '_sha512', '
+_sin', '_sqrt', '_test', '_test_generator', '_urandom', '_warn', 'betavariate', 'choice', 'expovariate', 'gammavariate',
+ 'gauss', 'getrandbits', 'getstate', 'lognormvariate', 'normalvariate', 'paretovariate', 'randint', 'random', 'randrange
+', 'sample', 'seed', 'setstate', 'shuffle', 'triangular', 'uniform', 'vonmisesvariate', 'weibullvariate']      
+=====================================================================================================================================
+#working in files 
+aspire1015@aspire1015-ThinkCentre-M71e:~$ python
+Python 2.7.12 (default, Oct  8 2019, 14:14:10) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> file=open('abi.txt','r')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IOError: [Errno 2] No such file or directory: 'abi.txt'
+>>> 
+[1]+  Stopped                 python
+aspire1015@aspire1015-ThinkCentre-M71e:~$ cd ..
+aspire1015@aspire1015-ThinkCentre-M71e:/home$ ls
+aspire1015
+aspire1015@aspire1015-ThinkCentre-M71e:/home$ cd aspire1015
+aspire1015@aspire1015-ThinkCentre-M71e:~$ ls'
+> ^C
+aspire1015@aspire1015-ThinkCentre-M71e:~$ ls
+abinaya  Documents         Music       Public              str.py
+Desktop  Downloads         Pictures    set.py              Templates
+dic.py   examples.desktop  pracpro.py  Sky_received_files  Videos
+aspire1015@aspire1015-ThinkCentre-M71e:~$ cd Desktop
+aspire1015@aspire1015-ThinkCentre-M71e:~/Desktop$ ls
+abinaya.html  code     login.html  prac3.py  Untitled Folder  Update 21.01.2020
+abi.txt       css.txt  prac2.py    prac.py   update           update 22.01.2020
+aspire1015@aspire1015-ThinkCentre-M71e:~/Desktop$ python
+Python 2.7.12 (default, Oct  8 2019, 14:14:10) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> file=open('abi.txt','r')
+>>> for each in file
+  File "<stdin>", line 1
+    for each in file
+                   ^
+SyntaxError: invalid syntax
+>>> for each in file:
+... print(each)
+  File "<stdin>", line 2
+    print(each)
+        ^
+IndentationError: expected an indented block
+>>> for each in file:
+...     print(each)
+... 
+hai 
+
+file manipulation operations in python based on 
+
+>>> file=open('abi.txt','r')
+>>> print(file.read())
+hai 
+file manipulation operations in python based on 
+
+>>> print(file.read(10))
+
+>>> 
+>>> file=open('abi.txt','r')
+>>> print(file.read(10))
+hai 
+file 
+>>> import os
+>>> import io.DEFAULT_BUFFER_SIZE as x
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named DEFAULT_BUFFER_SIZE
+>>> import io
+>>> io.DEFAULT_BUFFER_SIZE
+8192
+>>> file=open('abi.txt','r')
+>>> print(file.name)
+abi.txt
+>>> print(file.mode)
+r
+>>> print(file.softspace)
+0
+>>> print(file.close)
+<built-in method close of file object at 0x7f2f62be45d0>
+>>> fo=open("prac.txt",'w+')
+>>> fo.write("practicing python in to be appllied in future.\n python is working as the top languages in 21st century.\n python is one of the fastest moving language.\n it is also applied in the concepts of IOT") 
+>>> fo.read()
+''
+>>> 
+>>> fo.tell()
+193
+>>> fo.seek(0,0)
+>>> fo.read()
+'practicing python in to be appllied in future.\n python is working as the top languages in 21st century.\n python is one of the fastest moving language.\n it is also applied in the concepts of IOT'
+>>> fo.close()
+>>> 
+=================================================================================================================
+spire1015@aspire1015-ThinkCentre-M71e:~$ cd ..
+aspire1015@aspire1015-ThinkCentre-M71e:/home$ ls
+aspire1015
+aspire1015@aspire1015-ThinkCentre-M71e:/home$ cd aspire1015
+aspire1015@aspire1015-ThinkCentre-M71e:~$ ls
+abinaya  Documents         Music       Public              str.py
+Desktop  Downloads         Pictures    set.py              Templates
+dic.py   examples.desktop  pracpro.py  Sky_received_files  Videos
+aspire1015@aspire1015-ThinkCentre-M71e:~$ cd Documents
+aspire1015@aspire1015-ThinkCentre-M71e:~/Documents$ ls
+Python_Fresher_Training_2016.xlsx  python tutorial  update17.01.2020
+aspire1015@aspire1015-ThinkCentre-M71e:~/Documents$ python
+Python 2.7.12 (default, Oct  8 2019, 14:14:10) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import os
+>>> os.mkdir("prac file")
+>>> os.chdir("home/aspire/Documents/prac file")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+OSError: [Errno 2] No such file or directory: 'home/aspire/Documents/prac file'
+>>> os.chdir("home/aspire1015/Documents/prac file")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+OSError: [Errno 2] No such file or directory: 'home/aspire1015/Documents/prac file'
+>>> os.chdir("home/aspire1015/Documents/prac file")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+OSError: [Errno 2] No such file or directory: 'home/aspire1015/Documents/prac file'
+>>> os.chdir("home/Documents/prac file")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+OSError: [Errno 2] No such file or directory: 'home/Documents/prac file'
+>>> os.chdir("aspire1015/home/Documents/prac file")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+OSError: [Errno 2] No such file or directory: 'aspire1015/home/Documents/prac file'
+>>> os.chdir("home/aspire1015/Documents/prac file")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+OSError: [Errno 2] No such file or directory: 'home/aspire1015/Documents/prac file'
+>>> os.chdir("/home/aspire1015/Documents/prac file")
+>>> file=open("vish.txt","w+")
+>>> file.write("vishnus is bad boy and a lover of ?.\n And he is preparing for gate ")
+>>> file.read()
+''
+>>> 
+>>> file.seek(0,0)
+>>> file.tell()
+0
+>>> file.read()
+'vishnus is bad boy and a lover of ?.\n And he is preparing for gate '
+>>> file.close()
+>>> file.close
+<built-in method close of file object at 0x7f9e099b1540>
+>>> print(file.close)
+<built-in method close of file object at 0x7f9e099b1540>
+>>> os.remove()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: remove() takes exactly 1 argument (0 given)
+>>> os.remove("vish.txt")za
+>>> 
+
+

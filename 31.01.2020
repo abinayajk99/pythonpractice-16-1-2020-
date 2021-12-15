@@ -1,0 +1,125 @@
+>>> file=open("9.01.2020","r+")
+>>> for each in file:
+...     print(each)
+... 
+import math
+
+>>> def area(r):
+
+...     '''Are of a circle'''
+
+...     return math.pi * (r**2)
+
+... 
+
+>>> radii=[2,5,7.1,0.3,10]
+file.close()
+..........................................................................................................
+		//Creating a file using write of mode
+file=open("practice","w+")
+>>> file.write("this is a new file")
+>>> file.write("this file is in the range of +6+3+063")
+>>> file.close()
+for i in file:
+...     print(i)
+... 
+this is a new filethis file is in the range of +6+3+063
+..........................................................................................................
+		//append
+file=open("practice","a")
+>>> file.write("this will add this line")
+file.close()
+>>> file=open("practice","r")
+>>> file.read()
+'this is a new filethis file is in the range of +6+3+063this will add this line'
+.........................................................................................................
+		//write of mode
+with open("practice") as file:
+...     data=file.read()
+... 
+print(data)
+this is a new filethis file is in the range of +6+3+063this will add this line
+>>> 
+.......................................................................................................
+		//with of mode
+with open("practice","w") as f:
+...     f.write("hello World!!!")
+... 
+>>> with open("practice","r") as f:
+...     data=f.read()
+...     print(data)
+... 
+hello World!!!
+
+===================================================================================================================================
+		//read of method
+>>> file=open("9.01.2020","r+")
+>>> print(file.read())
+file.close()
+
+file=open("9.01.2020","r+")
+>>> print(file.read(5))
+impor
+.......................................................................................................
+				//working in directories
+
+>>> import os
+>>> file=open("abi","w+")
+>>> file.write("this file is created by me")
+>>> file.write("\n this belongs to abi\n we are in this fiels")
+>>> file.read()
+''
+>>> file.tell()
+69
+>>> file.seek(0,0)
+>>> file.tell()
+0
+>>> file.read()
+'this file is created by me\n this belongs to abi\n we are in this fiels'
+>>> file.tell()
+69
+>>> file.seek(0,0)
+>>> file.readline()
+'this file is created by me\n'
+>>> file.readline()
+' this belongs to abi\n'
+>>> file.readline()
+' we are in this fiels'
+>>> file.readlines()
+[]
+>>> file.tell()
+69
+>>> file.seek(0,0)
+>>> file.readlines()
+['this file is created by me\n', ' this belongs to abi\n', ' we are in this fiels']
+>>> file.tell()
+69
+>>> file.close()
+>>> os.rename("abi","prac")
+>>> file=open("prac","w+")
+>>> file.read()
+''
+>>> file.tell()
+0
+>>> file=open("prac","r")
+>>> file.read()
+''
+>>> os.getchwd()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'module' object has no attribute 'getchwd'
+>>> os.getcwd()
+'/home/aspire1015'
+>>> 
+========================================================RE==================================================================================
+import re
+>>> p="^a....s$"
+>>> t='abinas'
+>>> t2='binas'
+>>> r=re.match(p,t)
+>>> print(r)
+<_sre.SRE_Match object at 0x7fc68ebee5e0>
+>>> r=re.match(p,t2)
+
+
+
